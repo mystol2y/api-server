@@ -144,7 +144,7 @@ router.post('/update', async function(req, res) {
             password = md5(md5(sha1(member.plain_password))),
             plain_password = member.plain_password,
             age = member.age,
-            b_date = moment(new Date(req.body.member.b_date)).format('Y-MM-DD'),
+            b_date = moment(new Date(member.b_date)).format('Y-MM-DD'),
             married = member.married,
             address = JSON.stringify(member.address),
             commercial_affairs = member.commercial_affairs,
